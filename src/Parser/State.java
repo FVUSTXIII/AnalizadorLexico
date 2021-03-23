@@ -4,7 +4,7 @@ import java.util.regex.*;
 public class State {
     private int current_state;
     private String content;
-    public Token previous_token = new Token();
+    public Token previous_token =  new Token();
     private HashSet Symbols = new HashSet();
     private HashSet Symbol_states = new HashSet();
     private char char_in_turn;
@@ -48,7 +48,7 @@ public class State {
 
     public void newToken() {
         previous_token.setLexema(this.content);
-        previous_token.setCategory(stateCheck());
+        //previous_token.setCategory(stateCheck());
         previous_token.setM_n(this.current_state);
         this.content = "";
 
